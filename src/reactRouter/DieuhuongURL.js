@@ -18,7 +18,7 @@ class DieuhuongURL extends Component {
                     <div>
                         <Route exact path="/trang-chu" component={Home}/>
                         <Route exact path="/tin-tuc" component={News}/>
-                        <Route exact path="/tin-chi-tiet" component={Details}/>
+                        <Route exact path="/tin-chi-tiet/:slug.:id.html" component={Details}/>
                         <Route exact path="/lien-he" component={Contact}/>
                     </div>
         );

@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
-
+import dl from './dulieu.json';
 class details extends Component {
     render() {
         return (
             <div>
-                    
                     <header class="masthead tintuc">
                         <div class="container h-100">
                             <div class="row h-100">
@@ -16,35 +15,28 @@ class details extends Component {
                             </div>
                         </div>
                     </header>
-                    
-                    
-                    
-                    <div class="jumbotron jumbotron-fluid">
-                        <div class="container">
-                            <img src="http://placehold.it/1900x400/" class="img-fluid" alt=""/>
-                            <h1 class="display-5 text-center">Fluid jumbo heading</h1>
-                            <p class="lead">Jumbo helper text</p>
-                            <hr class="my-2"/>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque suscipit cum dolor, cupiditate sunt mollitia maxime quisquam fugit officiis velit accusamus reiciendis adipisci exercitationem natus reprehenderit nam provident. Inventore, sequi.
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque suscipit cum dolor, cupiditate sunt mollitia maxime quisquam fugit officiis velit accusamus reiciendis adipisci exercitationem natus reprehenderit nam provident. Inventore, sequi.
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque suscipit cum dolor, cupiditate sunt mollitia maxime quisquam fugit officiis velit accusamus reiciendis adipisci exercitationem natus reprehenderit nam provident. Inventore, sequi.
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque suscipit cum dolor, cupiditate sunt mollitia maxime quisquam fugit officiis velit accusamus reiciendis adipisci exercitationem natus reprehenderit nam provident. Inventore, sequi.
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque suscipit cum dolor, cupiditate sunt mollitia maxime quisquam fugit officiis velit accusamus reiciendis adipisci exercitationem natus reprehenderit nam provident. Inventore, sequi.
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque suscipit cum dolor, cupiditate sunt mollitia maxime quisquam fugit officiis velit accusamus reiciendis adipisci exercitationem natus reprehenderit nam provident. Inventore, sequi.
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque suscipit cum dolor, cupiditate sunt mollitia maxime quisquam fugit officiis velit accusamus reiciendis adipisci exercitationem natus reprehenderit nam provident. Inventore, sequi.
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque suscipit cum dolor, cupiditate sunt mollitia maxime quisquam fugit officiis velit accusamus reiciendis adipisci exercitationem natus reprehenderit nam provident. Inventore, sequi.
-
-                                vLorem ipsum dolor sit amet consectetur adipisicing elit. Neque suscipit cum dolor, cupiditate sunt mollitia maxime quisquam fugit officiis velit accusamus reiciendis adipisci exercitationem natus reprehenderit nam provident. Inventore, sequi.
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque suscipit cum dolor, cupiditate sunt mollitia maxime quisquam fugit officiis velit accusamus reiciendis adipisci exercitationem natus reprehenderit nam provident. Inventore, sequi.
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque suscipit cum dolor, cupiditate sunt mollitia maxime quisquam fugit officiis velit accusamus reiciendis adipisci exercitationem natus reprehenderit nam provident. Inventore, sequi.
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque suscipit cum dolor, cupiditate sunt mollitia maxime quisquam fugit officiis velit accusamus reiciendis adipisci exercitationem natus reprehenderit nam provident. Inventore, sequi.
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque suscipit cum dolor, cupiditate sunt mollitia maxime quisquam fugit officiis velit accusamus reiciendis adipisci exercitationem natus reprehenderit nam provident. Inventore, sequi.
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque suscipit cum dolor, cupiditate sunt mollitia maxime quisquam fugit officiis velit accusamus reiciendis adipisci exercitationem natus reprehenderit nam provident. Inventore, sequi.
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque suscipit cum dolor, cupiditate sunt mollitia maxime quisquam fugit officiis velit accusamus reiciendis adipisci exercitationem natus reprehenderit nam provident. Inventore, sequi.
-                            </p>
-                        </div>
-                    </div>
-                    <hr/>
+{/*begin news details*/}
+                {
+                    dl.map((value,key) => {
+                        if (value.id == this.props.match.params.id){
+                            return (
+                                <div className="jumbotron jumbotron-fluid">
+                                    <div className="container">
+                                        <img src={value.anh} className="img-fluid" alt=""/>
+                                        <h1 className="display-5 text-center">{value.tieude}</h1>
+                                        <p className="lead">{value.id}</p>
+                                        <hr className="my-2"/>
+                                        <p>
+                                            {value.noidung}
+                                        </p>
+                                    </div>
+                                </div>
+                            )
+                        }
+                    })
+                }
+                <hr/>
+{/*end news details*/}
 
                     <div class="container">
                         <div class="row mt-3">

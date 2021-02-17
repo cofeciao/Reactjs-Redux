@@ -41,9 +41,9 @@ class NewsItem extends Component {
                 <div class="col-4">
                     <div class="card-deck">
                         <div class="card">
-                        <a href={"/tin-chi-tiet/" + this.ChuyendoiURL(this.props.tieude) + "-" + this.props.tinid + ".html"}><img class="card-img-top" src={this.props.anh} alt="" />
+                        <a href={"/tin-chi-tiet/" + this.ChuyendoiURL(this.props.tieude) + "." + this.props.tinid + ".html"}><img class="card-img-top" src={this.props.anh} alt="" />
                             <div class="card-body">
-                                <h5 class="card-title text-center"><a href="/tin-chi-tiet">{this.props.tieude}</a></h5>
+                                <h5 class="card-title text-center"><a>{this.props.tieude}</a></h5>
                                 <p class="card-text">{this.props.trichdan}</p>-----
                             </div>
                         </a>
