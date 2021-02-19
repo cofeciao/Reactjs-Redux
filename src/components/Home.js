@@ -9,8 +9,8 @@ class home extends Component {
                 <div class="row h-100">
                     <div class="col-lg-7 my-auto">
                     <div class="header-content mx-auto">
-                        <h1 class="mb-5">Tên mình là Cao Minh, Chào mừng đến với Blog của mình !</h1>
-                        <a href="#download" class="btn btn-outline btn-xl js-scroll-trigger">Mình là ai? <br/> Click vào sẽ biết thôi</a>
+                        <h1 class="mb-5">Lorem</h1>
+                        <a href="#download" class="btn btn-outline btn-xl js-scroll-trigger">Alo? <br/> Click vào sẽ biết thôi</a>
                     </div>
                     </div>
                     <div class="col-lg-5 my-auto">
@@ -34,8 +34,10 @@ class home extends Component {
                 <div class="container">
                 <div class="row">
                     <div class="col-md-8 mx-auto">
-                    <h2 class="section-heading">Một Developer chập chững thôi không có gì nổi bật</h2>
-                    <p>Ngoài ra cũng là một kẻ yêu động vật, à mà còn hài hước đầy mộng mơ và thú vị</p>
+                    <h2 class="section-heading">Lorem ipsum dolor sit amet, consectetur adipisicing elit. </h2>
+                    <p>
+                        Ab, ad amet animi atque debitis doloremque esse ex id in maiores modi mollitia obcaecati odit perferendis qui similique tempore veritatis voluptatibus!
+                    </p>
                     <div class="badges">
                         <a class="badge-link" href="#"><img src="img/google-play-badge.svg" alt=""/></a>
                         <a class="badge-link" href="#"><img src="img/app-store-badge.svg" alt=""/></a>

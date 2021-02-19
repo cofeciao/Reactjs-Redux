@@ -12,6 +12,7 @@ import News from './News';
 import Details from './Details';
 import Contact from './Contact.js';
 import DieuhuongURL from '../reactRouter/DieuhuongURL';
+import home from "./Home.js";
 
 
 
