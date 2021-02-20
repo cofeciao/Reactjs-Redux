@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+const Redirect = require("react-router-dom").Redirect;
 
 class Contact extends Component {
     constructor(props) {
@@ -9,14 +10,26 @@ class Contact extends Component {
     }
 
     ischanged = (event) => {
-        console.log(event.target.value);
+        const target = event.target;
+        const key = target.name;
+        const value = target.value;
+        this.setState({
+           [key]: value
+        });
     }
 
     submitForm = (event) => {
+        this.setState({
+            isRedirect:true
+        })
+
         event.preventDefault();
     }
 
     render() {
+        if(this.state.isRedirect == true){
+            return <Redirect to={"/"} />
+        }
         return (
             <div>
                 <header className="masthead tintuc">
@@ -48,7 +61,7 @@ class Contact extends Component {
                                     </div>
                                     <div className="col-md-6">
                                         <div className="md-form mb-0">
-                                            <input type="text" id="email" name="femail" className="form-control"/>
+                                            <input onChange={(event) => {this.ischanged(event)}} type="text" id="email" name="femail" className="form-control"/>
                                             <label name="email" className="">Your email</label>
                                         </div>
                                     </div>
@@ -56,7 +69,7 @@ class Contact extends Component {
                                 <div className="row">
                                     <div className="col-md-12">
                                         <div className="md-form mb-0">
-                                            <input type="text" id="subject" name="fsubject" className="form-control"/>
+                                            <input onChange={(event) => {this.ischanged(event)}} type="text" id="subject" name="fsubject" className="form-control"/>
                                             <label name="subject" className="">Subject</label>
                                         </div>
                                     </div>
@@ -64,14 +77,13 @@ class Contact extends Component {
                                 <div className="row">
                                     <div className="col-md-12">
                                         <div className="md-form">
-                                            <textarea type="text" id="message" name="fmessage" rows="2" className="form-control md-textarea"></textarea>
+                                            <textarea onChange={(event) => {this.ischanged(event)}} type="text" id="message" name="fmessage" rows="2" className="form-control md-textarea"></textarea>
                                             <label name="message">Your message</label>
                                         </div>
                                     </div>
                                 </div>
                                 <div className="text-center text-md-left">
-                                    <a type="submitForm"  className="btn btn-primary">Send</a>
-                                    <button type="submit" onClick={(event) => {this.submitForm(event)}} className="submit">send</button>
+                                    <button type="submit" onClick={(event) => {this.submitForm(event)}} className="btn btn-primary">send</button>
                                 </div>
                             </form>
 
