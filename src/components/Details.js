@@ -3,7 +3,8 @@ import dl from './dulieu.json';
 import NewRelated from "./NewRelated";
 class details extends Component {
     render() {
-        console.log(dl[5]);
+        // console.log(dl);
+        var dem  = 1;
         return (
             <div>
                     <header className="masthead tintuc">
@@ -47,11 +48,10 @@ class details extends Component {
                         <div className="col-12">
                             <div className="card-deck">
                                 {
-
                                     dl.map((value,key) => {
-
                                         if (value.id != this.props.match.params.id){
-                                            if (key <= 3){
+                                            if (dem <= 4){
+                                                dem++;
                                                 return (
                                                     <NewRelated key={key} tinId={value.id} anh={value.anh} tieuDe={value.tieude} trichDan={value.trichdan} />
                                                 )

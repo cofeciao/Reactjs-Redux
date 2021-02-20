@@ -20,7 +20,7 @@ class Nav extends Component {
                     <div className="collapse navbar-collapse" id="navbarResponsive">
                         <ul className="navbar-nav ml-auto">
                             <li className="nav-item">
-                                <NavLink  to="/trang-chu" className="nav-NavLink js-scroll-trigger">Trang chủ</NavLink>     
+                                <NavLink  to="/" className="nav-NavLink js-scroll-trigger">Trang chủ</NavLink>
                             </li>
                             <li className="nav-item">
                                 <NavLink  to="/tin-tuc" className="nav-NavLink js-scroll-trigger">Tin Tức</NavLink>

@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 class NewsItem extends Component {
     constructor(props) {
         super(props);
-        
+
     }
     
     ChuyendoiURL = (str) => 
