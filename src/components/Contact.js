@@ -5,7 +5,8 @@ class Contact extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            isRedirect: false
+            isRedirect: false,
+            fngay : 'thu 3'
         }
     }
 
@@ -18,18 +19,33 @@ class Contact extends Component {
         });
     }
 
+    isFileChanged = (event) => {
+        const target = event.target;
+        const fanh = target.value;
+        console.log(fanh);
+    }
+
     submitForm = (event) => {
         this.setState({
             isRedirect:true
         })
 
         event.preventDefault();
+
+        this.getGiaTri();
+        // this.isFileChanged();
+    }
+
+    getGiaTri = () => {
+        return this.state;
     }
 
     render() {
         if(this.state.isRedirect == true){
             return <Redirect to={"/"} />
         }
+
+
         return (
             <div>
                 <header className="masthead tintuc">
@@ -82,11 +98,30 @@ class Contact extends Component {
                                         </div>
                                     </div>
                                 </div>
+                                <div className="row">
+                                    <div className="col-md-12">
+                                        <div className="md-form">
+                                            <select value={this.state.fngay} onChange={(event) => {this.ischanged(event)}} name="fngay" className="form-control">
+                                                <option value="thu 2">Thứ 2</option>
+                                                <option value="thu 3">Thứ 3</option>
+                                                <option value="thu 4">Thứ 4</option>
+                                                <option value="thu 5">Thứ 5</option>
+                                            </select>
+                                                                Date
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="row">
+                                    <div className="col-md-12">
+                                        <div className="md-form">
+                                            <input onChange={(event) => {this.isFileChanged(event)}} type="file" name="ffile"/>
+                                        </div>
+                                    </div>
+                                </div>
                                 <div className="text-center text-md-left">
                                     <button type="submit" onClick={(event) => {this.submitForm(event)}} className="btn btn-primary">send</button>
                                 </div>
                             </form>
-
                         </div>
                     </div>
                 </div>
